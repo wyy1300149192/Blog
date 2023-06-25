@@ -20,5 +20,5 @@ git push -f https://github.com/wyy1300149192/blog.git master
 # 提交所有代码到github
 cd ../../../
 git add .
-git cm -m 'update'
+git commit -m 'update'
 git push
