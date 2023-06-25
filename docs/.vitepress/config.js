@@ -4,7 +4,7 @@ module.exports = {
     // 网站描述
     description: 'God help those who help themselves.',
     // 打包目录
-    base: '/my_blog/',
+    base: '/blog/',
     head: [
         // 添加图标
         ['link', { rel: 'icon', href: '/favicon.ico' }]
