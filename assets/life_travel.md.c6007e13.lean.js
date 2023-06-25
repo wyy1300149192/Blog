@@ -1,1 +1,0 @@
-import{_ as t,o as d,c as r,O as a}from"./chunks/framework.0acab213.js";const u=JSON.parse('{"title":"杭州","description":"","frontmatter":{},"headers":[],"relativePath":"life/travel.md","filePath":"life/travel.md"}'),e={name:"life/travel.md"},o=a("",13),h=[o];function n(l,s,i,c,_,b){return d(),r("div",null,h)}const f=t(e,[["render",n]]);export{u as __pageData,f as default};
