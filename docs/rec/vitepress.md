@@ -149,11 +149,11 @@
                ],
                "/rec/": [
                    {
-                       text: "学习记录",
+                       text: "学习记录", // 侧边栏标题
                        items: [
                            {
-                               text: "vitepress",
-                               link: "/rec/vitepress",
+                               text: "vitepress", // 侧边栏项标题
+                               link: "/rec/vitepress", // 侧边栏地址
                            }
                        ],
                    },
@@ -163,6 +163,10 @@
        },
    }
    ```
+
+   <img src="./assets/image-20230627175802111.png" alt="image-20230627175802111" style="zoom:33%;" />
+
+   
 
    主题配置 `themeConfig`对象中可配置**头部右上导航栏（nav）**和**侧边导航栏（sidebar）**
 
@@ -184,4 +188,23 @@
 
    
 
-   `sidebar`为一个对象，
+   `sidebar`为一个对象，对象key为设置在哪个**路径**下显示侧边栏，**value**设置**侧边栏标题**和**侧边栏项目**
+
+   ```js
+   sidebar: { // 侧边栏，可以分组
+               "/rec/": [
+                   {
+                       text: "学习记录", // 侧边栏标题
+                       items: [
+                           {
+                               text: "vitepress", // 侧边栏项标题
+                               link: "/rec/vitepress", // 侧边栏地址
+                           }
+                       ],
+                   },
+               ],
+       
+           }
+   ```
+
+   <img src="./assets/image-20230627180333813.png" alt="image-20230627180333813" style="zoom:33%;" />
