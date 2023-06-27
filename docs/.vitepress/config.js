@@ -3,7 +3,7 @@ module.exports = {
     title: '失望的石榴',
     // 网站描述
     description: 'God help those who help themselves.',
-    // 打包目录
+    // 根地址
     base: '/blog/',
     head: [
         // 添加图标
@@ -11,21 +11,22 @@ module.exports = {
     ],
     themeConfig: {
         nav: [
-            { text: '记录', link: '/record/Css' },
+            { text: '知识', link: '/knowledge/Css' },
             { text: '生活', link: '/life/travel' },
+            { text: '记录', link: '/rec/vitepress' },
         ],
         sidebar: { // 侧边栏，可以分组
-            "/record/": [
+            "/knowledge/": [
                 {
-                    text: "前端知识点记录",
+                    text: "前端知识",
                     items: [
                         {
                             text: "Css",
-                            link: "/record/Css",
+                            link: "/knowledge/Css",
                         },
                         {
                             text: "Html",
-                            link: "/record/Html",
+                            link: "/knowledge/Html",
                         }
                     ],
                 },
@@ -41,6 +42,17 @@ module.exports = {
                         {
                             text: "酒",
                             link: "/life/wine",
+                        }
+                    ],
+                },
+            ],
+            "/rec/": [
+                {
+                    text: "学习记录",
+                    items: [
+                        {
+                            text: "vitepress",
+                            link: "/rec/vitepress",
                         }
                     ],
                 },
