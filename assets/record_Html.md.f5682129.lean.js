@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as l,O as n}from"./chunks/framework.0acab213.js";const h=JSON.parse('{"title":"HTML","description":"","frontmatter":{},"headers":[],"relativePath":"record/Html.md","filePath":"record/Html.md"}'),o={name:"record/Html.md"},p=n("",148),t=[p];function e(c,r,D,F,y,i){return a(),l("div",null,t)}const g=s(o,[["render",e]]);export{h as __pageData,g as default};
