@@ -52,7 +52,7 @@
 
 
 
-6. 接下来新建首页页面：在`docs`文件夹下创建 `index.md`
+6. 接下来新建首页页面：在`docs`文件根目录下创建 `index.md`
 
    ```markdown
    ---
@@ -95,7 +95,24 @@
 
 
 
-7. 在 `docs/.vitepress/`路径下创建`config.js`配置文件，设置整个网站的配置
+7. 页面路径规则，vitepress页面根路径为`docs`文件夹
+
+   如`/knowledge/Css`则文件路径：
+
+   ```
+   .
+   ├─ docs
+   │  ├─ .vitepress
+   │  │  └─ config.js
+   |  ├─ knowledge
+   |  |  └─ Css.md
+   │  └─ index.md
+   └─ package.json
+   ```
+
+   
+
+8. 在 `docs/.vitepress/`路径下创建`config.js`配置文件，设置整个网站的配置
 
    ```js
    module.exports = {
