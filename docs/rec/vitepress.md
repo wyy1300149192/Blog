@@ -191,7 +191,7 @@
 
    `nav`为一个数组，里面每一个对象对应一个导航栏项目
 
-   ​	- text：导航标题
+   ​	- text：导航标题
 
    ​    - link：导航地址
 
@@ -225,3 +225,52 @@
    ```
 
    <img src="./assets/image-20230627180333813.png" alt="image-20230627180333813" style="zoom:33%;" />
+
+
+
+9. 接下来利用github部署网站
+
+   1）创建仓库
+
+   2）打开`Settings`页面
+
+   3）进入`Pages`页签
+
+   4）在Branch处选择分支，点击`Save`
+
+   ![image-20230628143613084](./assets/image-20230628143613084.png)
+
+   点击`Save`后等待一会，创建完成将显示以下提示。表示创建成功
+
+   <img src="./assets/image-20230628144409278.png" alt="image-20230628144409278" style="zoom:33%;" />
+
+10. 在项目根目录增加`deploy.sh`，方便一键部署
+
+    ```sh
+    # 确保脚本抛出遇到的错误
+    set -e
+    
+    # 打包生成静态文件
+    npm run docs:build
+    
+    # 进入 dist 目录
+    cd docs/.vitepress/dist
+    
+    # 提交
+    git init
+    git add .
+    git commit -m 'deploy'
+    
+    # 部署网站 git push -f 仓库 分支
+    git push -f https://github.com/wyy1300149192/blog.git master
+    
+    # 提交所有代码到github
+    cd ../../../
+    git add .
+    git commit -m 'update'
+    git push
+    ```
+
+    
+
+至此，成功使用VitePress完成部署了一个简易的博客网站
