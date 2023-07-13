@@ -99,7 +99,7 @@
 
    如`/knowledge/Css`则文件路径：
 
-   ```
+   ```markdown
    .
    ├─ docs
    │  ├─ .vitepress
