@@ -1,0 +1,1 @@
+import{_ as s,o as a,c as n,O as t}from"./chunks/framework.0acab213.js";const C=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"life/travel.md","filePath":"life/travel.md"}'),o={name:"life/travel.md"},r=t("",27),e=[r];function p(l,c,i,g,h,d){return a(),n("div",null,e)}const A=s(o,[["render",p]]);export{C as __pageData,A as default};
