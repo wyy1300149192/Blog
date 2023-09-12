@@ -27,6 +27,10 @@ module.exports = {
                         {
                             text: "Html",
                             link: "/knowledge/Html",
+                        },
+                        {
+                            text: "JavaScript",
+                            link: "/knowledge/JavaScript",
                         }
                     ],
                 },

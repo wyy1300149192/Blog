@@ -1056,3 +1056,767 @@ p {
 - `px` (像素): 将像素的值赋予给你的文本。这是一个绝对单位，它导致了在任何情况下，页面上的文本所计算出来的像素值都是一样的。
 - `em`: 1em 等于我们设计的当前元素的父元素上设置的字体大小 
 - `rem`: 这个单位的效果和 `em` 差不多，除了 1`rem` 等于 HTML 中的根元素的字体大小
+
+元素的 `font-size` 属性是从该元素的父元素继承的。所以这一切都是从整个文档的根元素——`<html>`开始，浏览器的 `font-size` 标准设置的值为 16px。
+
+### 字体样式
+
+**斜体**
+
+[`font-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style): 用来打开和关闭文本 italic (斜体)。
+
+- `normal`: 将文本设置为普通字体 (将存在的斜体关闭)
+- `italic`: 如果当前字体的斜体版本可用，那么文本设置为斜体版本；如果不可用，那么会利用 oblique 状态来模拟 italics。
+
+
+
+**字体粗细**
+
+[`font-weight`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight): 设置文字的粗体大小。
+
+- `normal`, `bold`: 普通或者**加粗**的字体粗细
+- `lighter`, `bolder`: 将当前元素的粗体设置为比其父元素粗体更细或更粗一步。
+- `100`–`900`: 数值粗体值，如果需要，可提供比上述关键字更精细的粒度控制。
+
+
+
+**大小写转换**
+
+[`text-transform`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-transform): 允许你设置要转换的字体。
+
+- `none`: 防止任何转型。
+- `uppercase`: 将所有文本转为大写。
+- `lowercase`: 将所有文本转为小写。
+- `capitalize`: 转换所有单词让其首字母大写。
+- `full-width`: 将所有字形转换成全角，即固定宽度的正方形，类似于等宽字体，允许拉丁字符和亚洲语言字形（如中文，日文，韩文）对齐。
+
+
+
+**字体装饰线**
+
+[`text-decoration`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration): 设置/取消字体上的文本装饰
+
+- `none`: 取消已经存在的任何文本装饰。
+- `underline`: 文本下划线。
+- `overline`: 文本上划线
+- `line-through`: 穿过文本的线。
+
+可以一次接受多个值，如果你想要同时添加多个装饰值，比如 `text-decoration: underline overline`.。
+
+
+
+**字体阴影**
+
+`text-shadow`: 设置字体阴影，最多需要四4个值
+
+```css
+text-shadow: 4px 4px 5px red;
+```
+
+1. 阴影与原始文本的水平偏移，这个值必须指定。
+2. 阴影与原始文本的垂直偏移;效果基本上就像水平偏移，除了它向上/向下移动阴影，而不是左/右。这个值必须指定。
+3. 模糊半径 - 更高的值意味着阴影分散得更广泛。如果不包含此值，则默认为 0，这意味着没有模糊。
+4. 阴影的基础颜色，如果没有指定，默认为 `black`.
+
+
+
+您可以通过包含以逗号分隔的多个阴影值，将多个阴影应用于同一文本，例如：
+
+```css
+text-shadow: -1px -1px 1px #aaa,
+             0px 4px 1px rgba(0,0,0,0.5),
+             4px 4px 5px rgba(0,0,0,0.7),
+             0px 0px 7px rgba(0,0,0,0.4);
+```
+
+### 文本布局
+
+**文本对齐**
+
+[`text-align`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align) 属性用来控制文本如何和它所在的内容盒子对齐。
+
+- `left`: 左对齐文本。
+- `right`: 右对齐文本。
+- `center`: 居中文字
+- `justify`: 使文本展开，改变单词之间的差距，使所有文本行的宽度相同。
+
+
+
+**行高**
+
+[`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height) 属性设置文本每行之间的高，可以接受大多数单位，不过也可以设置一个无单位的值，作为乘数，通常这种是比较好的做法。无单位的值乘以 [`font-size`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size) 来获得 `line-height`。当行与行之间拉开空间，正文文本通常看起来更好更容易阅读。推荐的行高大约是 1.5–2 (双倍间距。) 所以要把我们的文本行高设置为字体高度的 1.5 倍，你可以使用这个：
+
+```css
+line-height: 1.5;
+```
+
+
+
+### 更多字体样式和文本呢布局
+
+Font 样式：
+
+- [`font-variant`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant): 在小型大写字母和普通文本选项之间切换。
+- [`font-kerning`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-kerning): 开启或关闭字体间距选项。
+- [`font-feature-settings`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-feature-settings): 开启或关闭不同的 [OpenType](https://en.wikipedia.org/wiki/OpenType) 字体特性。
+- [`font-variant-alternates`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-alternates): 控制给定的自定义字体的替代字形的使用。
+- [`font-variant-caps`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-caps): 控制大写字母替代字形的使用。
+- [`font-variant-east-asian` (en-US)](https://developer.mozilla.org/en-US/docs/Web/CSS/font-variant-east-asian): 控制东亚文字替代字形的使用，像日语和汉语。
+- [`font-variant-ligatures`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-ligatures): 控制文本中使用的连写和上下文形式。
+- [`font-variant-numeric`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-numeric): 控制数字，分式和序标的替代字形的使用。
+- [`font-variant-position`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant-position): 控制位于上标或下标处，字号更小的替代字形的使用。
+- [`font-size-adjust`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size-adjust): 独立于字体的实际大小尺寸，调整其可视大小尺寸。
+- [`font-stretch`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-stretch): 在给定字体的可选拉伸版本中切换。
+- [`text-underline-position`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-underline-position): 指定下划线的排版位置，通过使用 `text-decoration-line` 属性的`underline` 值。
+- [`text-rendering`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-rendering): 尝试执行一些文本渲染优化。
+
+文本布局样式：
+
+- [`text-indent`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-indent): 指定文本内容的第一行前面应该留出多少的水平空间。
+- [`text-overflow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-overflow): 定义如何向用户表示存在被隐藏的溢出内容。
+- [`white-space`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space): 定义如何处理元素内部的空白和换行。
+- [`word-break`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/word-break): 指定是否能在单词内部换行。
+- [`direction`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/direction): 定义文本的方向 (这取决于语言，并且通常最好让 HTML 来处理这部分，因为它是和文本内容相关联的。)
+- [`hyphens`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/hyphens): 为支持的语言开启或关闭连字符。
+- [`line-break`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-break): 对东亚语言采用更强或更弱的换行规则。
+- [`text-align-last`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-align-last): 定义一个块或行的最后一行，恰好位于一个强制换行前时，如何对齐。
+- [`text-orientation`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-orientation): 定义行内文本的方向。
+- [`word-wrap`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/overflow-wrap): 指定浏览器是否可以在单词内换行以避免超出范围。
+- [`writing-mode`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/writing-mode): 定义文本行布局为水平还是垂直，以及后继文本流的方向。
+
+### 字体简写
+
+许多字体的属性也可以通过 [`font`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font) 的简写方式来设置 . 这些是按照以下顺序来写的： [`font-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-style), [`font-variant`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-variant), [`font-weight`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-weight), [`font-stretch`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-stretch), [`font-size`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size), [`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height), and [`font-family`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-family).
+
+如果你想要使用 `font` 的简写形式，在所有这些属性中，只有 `font-size` 和 `font-family` 是一定要指定的。
+
+[`font-size`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/font-size) 和 [`line-height`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/line-height) 属性之间必须放一个正斜杠。
+
+```css
+font:
+  italic normal bold normal 3em/1.5 Helvetica,
+  Arial,
+  sans-serif;
+```
+
+
+
+### 链接样式
+
+> 链接存在时处于不同的状态，每一个状态都可以用对应的 [伪类](https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes) 来应用样式：
+
+- `link` 没有访问过的状态
+- `Visited` 已经访问过的状态
+- `Hover` 光标悬浮状态
+- `Focus` 一个链接当它被选中的时候 (比如通过键盘的 Tab 移动到这个链接的时候）
+- `Active` 一个链接当它被激活的时候 (比如被点击的时候)
+
+
+
+**链接默认样式**
+
+- 链接具有下划线。
+- 未访问过的 (Unvisited) 的链接是蓝色的。
+- 访问过的 (Visited) 的链接是紫色的。
+- 悬停 (Hover) 在一个链接的时候鼠标的光标会变成一个小手的图标。
+- 选中 (Focus) 链接的时候，链接周围会有一个轮廓
+- 激活 (Active) 链接的时候会变成红色 (当你点击链接时，请尝试按住鼠标按钮。)
+
+
+
+**在链接中增加图标**
+
+```css
+a {
+  background: url("external-link-52.png") no-repeat 100% 0;
+  background-size: 16px 16px;
+  padding-right: 19px;
+}
+```
+
+这里，我们在外部链接上插入了一个自定义背景图片，最后，我们在链接上设置 [`padding-right`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/padding-right) ，为背景图片留出空间，这样就不会让它和文本重叠了。
+
+
+
+## 排版
+
+### Flex布局
+
+>  弹性盒模型（Flexible Box模型），也被成为flexbox，是一种一维的布局模型（也就是说一次只能处理一个维度上的元素布局，一行或者一列）。它给flexbox的子元素之间提供了强大的空间分布和对齐能力。
+
+当元素表现为 flex 框时，它们沿着两个轴来布局：
+
+![在从左到右的语言中，三个 flex 项并排放置在 flex 容器中。主轴——弹性容器布置 flex 方向上的轴——是水平的。主轴的两端是开始端和结束端，分别位于左侧和右侧。交叉轴是垂直的；垂直于主轴。交叉轴的开始端和结束端分别位于顶部和底部。flex 项沿着主轴排列，在这种情况下，宽度称为主轴尺寸，flex 项沿交叉轴排列，在这种情况下，高度称为交叉尺寸。](./assets/flex_terms.png)
+
+- **主轴**（main axis）是沿着 flex 元素放置的方向延伸的轴（比如页面上的横向的行、纵向的列）。该轴的开始和结束被称为 **main start** 和 **main end**。
+- **交叉轴**（cross
+
+
+
+**列还是行？**
+
+弹性盒子提供了 [`flex-direction`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-direction) 这样一个属性，它可以指定主轴的方向——它默认值是 `row`
+
+
+
+**换行**
+
+子元素如果超出了它们的容器。默认将不会换行，增加`flex-wrap: wrap`使子元素自动换行
+
+<img src="./assets/flexbox-example3.png" alt="简单弹性盒子示例，将所有 flex 项都布置在弹性容器的一行中。第八个 flex 项在浏览器窗口溢出，页面具有可见的水平和垂直滚动条，因为它无法容纳在窗口的宽度内，因为前七个 flex 项占用了视口中的可用空间。默认情况下，如果将弹性方向设置为行，浏览器会尝试将所有 flex 项放在一行中；如果弹性方向设置为列，则会尝试将所有 flex 项置于单列中。" style="zoom:50%;" />
+
+
+
+**flex-flow 缩写**
+
+到这里，应当注意到存在着 [`flex-direction`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-direction) 和 [`flex-wrap`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-wrap)——的缩写 [`flex-flow`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex-flow)。比如，你可以将
+
+```css
+flex-direction: row;
+flex-wrap: wrap;
+```
+
+替换为
+
+```css
+flex-flow: row wrap;
+```
+
+
+
+**flex 项的动态尺寸**
+
+```css
+article {
+  flex: 1;
+}
+```
+
+这是一个无单位的比例值，表示每个 flex 项沿主轴的可用空间大小。占用的空间是在设置 padding 和 margin 之后剩余的空间。因为它是一个比例，这意味着将每个 flex 项的设置为 400000 的效果和 1 的时候是完全一样的。
+
+你还可以指定 flex 的最小值：
+
+```css
+article {
+  flex: 1 200px;
+}
+```
+
+这表示“每个 flex 项将首先给出 200px 的可用空间，然后，剩余的可用空间将根据分配的比例共享”。
+
+
+
+**水平和垂直对齐**
+
+我们可以使用弹性盒子的功能让 flex 项沿主轴或交叉轴对齐。
+
+[`align-items`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/align-items) 控制 flex 项在交叉轴上的位置。
+
+[`justify-content`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/justify-content) 控制 flex 项在主轴上的位置。
+
+
+
+**flex 项排序**
+
+弹性盒子也有可以改变 flex 项的布局位置的功能，而不会影响到源顺序（即 dom 树里元素的顺序）。这也是传统布局方式很难做到的一点。
+
+使用 `  order: 1`属性进行排序
+
+- 所有 flex 项默认的 [`order`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/order) 值是 0。
+- order 值大的 flex 项比 order 值小的在显示顺序中更靠后。
+- 相同 order 值的 flex 项按源顺序显示。所以假如你有四个元素，其 order 值分别是 2，1，1 和 0，那么它们的显示顺序就分别是第四，第二，第三，和第一。
+
+
+
+
+
+**常用属性：**
+
+**1）flex-direction**
+
+设置主轴方向，有四个值可选
+
+- row 水平
+- row-reverse 水平倒着拍
+- column 垂直
+- column-reverse 垂直倒着拍
+
+
+
+**2）flex-wrap**
+
+设置容器内的元素是否自动换行。默认flex内的元素是不会自动换行的，会压缩成一行显示
+
+- nowrap：不换行，压缩成一行
+- wrap：宽度不够自动换行
+- wrap-reverse： 宽度不够自动换行，且交叉轴的起始线和终止线会反过来
+
+
+
+**3）justify-content**
+
+用来设置容器内元素在主轴方向的对齐方式
+
+- center：居中对齐
+- left：左对齐
+- right：右对齐
+- flex-start：从主轴的开始排列
+- flex-end：从主轴的末尾开始排列
+- space-between：子元素间隔平均分布，`两端间隔为0`
+- space-around：子元素间隔平均分布，两端间隔为元素间隔的`一半`
+- space-evenly：子元素、两端间隔`全都`平均分布
+
+**4）align-items**
+
+用来设置容器内的元素在交叉轴(侧轴)的对齐方式
+
+- normal：默认从主轴的开始排列
+- flex-start：元素向交叉轴起始线对齐
+- flex-end：元素向交叉轴终止线对齐
+- start：元素向交叉轴起始线对齐
+- end：元素向交叉轴终止线对齐
+- center：元素在交叉轴居中。如果元素在交叉轴上的高度大于容器的高度，那么在两个方向上溢出距离相同
+- left：元素一个挨着一个对齐在对齐容器的左边。如果属性的轴与内联轴不平行，则该值的行为类似于start。
+- right：元素一个挨着一个对齐在对齐容器的右边。如果属性的轴与内联轴不平行，则该值的行为类似于start。
+
+**5）align-content**
+
+align-content属性是设置浏览器如何沿着弹性盒子布局的交叉轴在内容项和周围分配空间
+
+**只适用**多行的flex容器（也就是flex容器中的子项不止一行时该属性才有效果），它的作用是当flex容器在交叉轴上有多余的空间时，将子项作为一个整体（属性值为：flex-start、flex-end、center时）进行对齐
+
+
+
+- start: 所有行从容器的起始边缘开始填充
+
+- end: 所有行从容器的结束边缘开始填充
+
+- flex-start: 所有行从垂直轴起点开始填充。第一行的垂直轴起点边和容器的垂直轴起点边对齐。接下来的每一行紧跟前一行
+
+- flex-end: 所有行从垂直轴末尾开始填充。最后一行的垂直轴起点边和容器的垂直轴起点边对齐。所有后续行与前一个对齐
+
+- center: 所有行朝向容器的中心填充。每行互相紧挨，相对于容器居中对齐。容器的垂直轴起点边和第一行的距离相等于容器的垂直轴终点边和最后一行的距离。
+
+- space-between: 所有行在容器中平均分布。相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的边对齐。
+
+- space-around: 所有行在容器中平均分布，相邻两行间距相等。容器的垂直轴起点边和终点边分别与第一行和最后一行的距离是相邻两行间距的一半。
+
+- space-evenly: 所有行沿垂直轴均匀分布在对齐容器内。每对相邻的项之间的间距，主开始边和第一项，以及主结束边和最后一项，都是完全相同的。
+
+
+
+### 网格布局
+
+> CSS 网格是一个用于 web 的二维布局系统。利用网格，你可以把内容按照行与列的格式进行排版。另外，网格还能非常轻松地实现一些复杂的布局。关于使用网格进行页面排版，这篇文章包含了你需要的一切知识。
+
+
+
+首先，我们通过把容器的 [`display`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display) 属性设置为 `grid` ,来定义一个网格。与弹性盒子一样，将父容器改为网格布局后，他的直接子项会变为网格项。
+
+```css
+.container {
+  display: grid;
+}
+```
+
+与弹性盒子不同的是，在定义网格后，网页并不会马上发生变化。因为 `display: grid` 的声明只创建了一个只有一列的网格，所以子项还是会像正常布局流那样，自上而下、一个接一个的排布。
+
+
+
+**网格宽度**
+
+使用 `grid-template-columns`属性定义每一列的宽度，设置几项就是几列
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+}
+```
+
+宽度也可使用`fr`定义行和列的大小，个单位代表网格容器中可用空间的一份，宽度可以会随着可用空间变小而变小。
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+```
+
+
+
+**网格间隙**
+
+使用 [`grid-column-gap` ](https://developer.mozilla.org/en-US/docs/Web/CSS/column-gap) 属性来定义列间隙；使用 [`grid-row-gap` ](https://developer.mozilla.org/en-US/docs/Web/CSS/row-gap) 来定义行间隙；使用 [`grid-gap`](https://developer.mozilla.org/en-US/docs/Web/CSS/gap) 可以同时设定两者。
+
+```css
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 20px;
+}
+```
+
+<img src="./assets/image-20230728152946563.png" alt="image-20230728152946563" style="zoom:50%;" />
+
+
+
+**重复构建轨道组**
+
+你可以使用`repeat`来重复构建具有某些宽度配置的某些列。举个例子，如果要创建多个等宽轨道，可以用下面的方法。
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+```
+
+
+
+**显式网格与隐式网格**
+
+显式网格是我们用 `grid-template-columns` 或 `grid-template-rows` 属性创建的。
+
+隐式网格中生成的行/列大小是参数默认是 `auto` ，大小会根据放入的内容自动调整。当然，你也可以使用[`grid-auto-rows`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-rows)和[`grid-auto-columns`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-auto-columns)属性手动设定隐式网格轨道的大小。
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 100px;
+  grid-gap: 20px;
+}
+```
+
+<img src="./assets/image-20230728154716204.png" alt="image-20230728154716204" style="zoom:50%;" />
+
+  我们还可以使用`grid-auto-rows: minmax(100px, auto)`设置最小值
+
+
+
+**自动使用多列填充**
+
+通过设置grid-template-columns属性，我们可以实现这个效果，不过这一次我们会用到 repeat() 函数中的一个关键字auto-fill来替代确定的重复次数。而函数的第二个参数，我们使用minmax()函数来设定一个行/列的最小值，以及最大值 1fr。
+
+```css
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+  grid-gap: 20px;
+}
+```
+
+<img src="./assets/image-20230728155400765.png" alt="image-20230728155400765" style="zoom:50%;" />
+
+**元素开始与结束位置**
+
+- grid-column-start 
+
+- grid-column-end 
+
+- grid-row-start 
+
+- grid-row-end 
+
+以上属性可以设定行和列开始与结束位置
+
+
+
+缩写形式：
+
+- grid-column
+
+- grid-row
+
+注意开始与结束的线的序号要使用`/`符号分开。
+
+
+
+**使用 grid-template-areas 属性放置元素**
+
+另一种往网格放元素的方式是用[`grid-template-areas`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/grid-template-areas)属性，并且你要命名一些元素并在属性中使用这些名字作为一个区域。
+
+```css
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar content"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+}
+
+header {
+  grid-area: header;
+}
+
+article {
+  grid-area: content;
+}
+
+aside {
+  grid-area: sidebar;
+}
+
+footer {
+  grid-area: footer;
+}
+```
+
+`grid-template-areas`属性的使用规则如下：
+
+- 你需要填满网格的每个格子
+- 对于某个横跨多个格子的元素，重复写上那个元素`grid-area`属性定义的区域名字
+- 所有名字只能出现在一个连续的区域，不能在不同的位置出现
+- 一个连续的区域必须是一个矩形
+- 使用`.`符号，让一个格子留空
+
+### 浮动
+
+> [`float`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/float) 属性最初只用于在成块的文本内浮动图像，但是现在它已成为在网页上创建多列布局的最常用工具之一。
+
+
+
+float设置left可使元素吸附到左侧，脱离文档流，在正常布局中位于该浮动元素之下的内容，此时会围绕着浮动元素，填满其右侧的空间。
+
+```html
+<h1>Simple float example</h1>
+
+<div class="box">Float</div>
+
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus aliquam
+  dolor, eu lacinia lorem placerat vulputate. Duis felis orci, pulvinar id metus
+  ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at ultricies tellus
+  laoreet sit amet.
+</p>
+
+<p>
+  Sed auctor cursus massa at porta. Integer ligula ipsum, tristique sit amet
+  orci vel, viverra egestas ligula. Curabitur vehicula tellus neque, ac ornare
+  ex malesuada et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse
+  ac imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
+  ornare egestas augue ut luctus. Proin blandit quam nec lacus varius commodo et
+  a urna. Ut id ornare felis, eget fermentum sapien.
+</p>
+
+<p>
+  Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
+  ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
+  est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
+  tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies lectus
+  sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
+  vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
+  penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+</p>
+```
+
+```css
+body {
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto;
+  font:
+    0.9em/1.2 Arial,
+    Helvetica,
+    sans-serif;
+}
+
+.box {
+  float: left;
+  margin-right: 15px;
+  width: 150px;
+  height: 100px;
+  border-radius: 5px;
+  background-color: rgb(207, 232, 220);
+  padding: 1em;
+}
+```
+
+<img src="./assets/image-20230728165721510.png" alt="image-20230728165721510" style="zoom:50%;" />
+
+
+
+**清除浮动**
+
+我们看到，一个浮动元素会被移出正常文档流，且其他元素会显示在它的下方。如果我们不想让剩余元素也受到浮动元素的影响，我们需要 停止 它；这是通过添加 [`clear`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/clear) 属性实现的。
+
+可以给其后受影响的的元素设置一下三个值
+
+- `left`：停止任何活动的左浮动
+- `right`：停止任何活动的右浮动
+- `both`：停止任何活动的左右浮动
+
+
+
+
+
+其他方式
+
+1）clearfix 小技巧
+
+先向包含浮动内容及其本身的盒子后方插入一些生成的内容，并将生成的内容清除浮动。
+
+```css
+.wrapper::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+```
+
+
+
+2）使用 overflow
+
+一个替代的方案是将包裹元素的 `overflow` 属性设置为除 `visible` 外的其他值。
+
+```css
+.wrapper {
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  overflow: auto;
+}
+```
+
+大部分情况下这个技巧都可以奏效，但是可能会出现莫名其妙的滚动条或裁剪阴影，这是使用 overflow 带来的一些副作用。
+
+
+
+3）display: flow-root
+
+一个较为现代的方案是使用 `display` 属性的 `flow-root` 值。它可以无需小技巧来创建块格式化上下文（BFC），在使用上没有副作用。
+
+从 `.wrapper` 中移除 `overflow: auto` 规则并添加 `display: flow-root`。如果你的浏览器支持该属性（[支持的浏览器列表](https://developer.mozilla.org/zh-CN/docs/Web/CSS/display#浏览器兼容性)），盒子就会停止浮动。
+
+```css
+.wrapper {
+  background-color: rgb(79, 185, 227);
+  padding: 10px;
+  color: #fff;
+  display: flow-root;
+}
+```
+
+### 定位
+
+> 定位允许你从正常的文档流布局中取出元素，并使它们具有不同的行为，例如放在另一个元素的上面，或者始终保持在浏览器视窗内的同一位置。
+
+
+
+**相对定位**
+
+相对定位是我们将要看的第一个位置类型。它与静态定位非常相似，占据在正常的文档流中，除了你仍然可以修改它的最终位置，包括让它与页面上的其他元素重叠。
+
+```css
+position: relative;
+```
+
+[`top`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/top), [`bottom`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/bottom), [`left`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/left), 和 [`right`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/right) 来精确指定要将定位元素移动到的位置。
+
+```css
+top: 30px;
+left: 30px;
+```
+
+
+
+**绝对定位**
+
+绝对定位的元素不再存在于正常文档布局流中。相反，它坐在它自己的层独立于一切。这意味着我们可以创建不干扰页面上其他元素的位置的隔离的 UI 功能。
+
+```css
+position: absolute;
+```
+
+
+
+哪个元素是绝对定位元素的“包含元素“？这取决于绝对定位元素的父元素的 position 属性。
+
+如果所有的父元素都没有显式地定义 position 属性，那么所有的父元素默认情况下 position 属性都是 static。结果，绝对定位元素会被包含在**初始块容器**中。
+
+我们可以改变**定位上下文** —— 绝对定位的元素的相对位置元素。通过设置其中一个父元素的定位属性 —— 也就是包含绝对定位元素的那个元素
+
+```css
+position: relative;
+```
+
+
+
+**z-index**
+
+当元素开始重叠，什么决定哪些元素出现在其他元素的顶部？
+
+[`z-index`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/z-index) 值影响定位元素位于该轴上的位置；正值将它们移动到堆栈上方，负值将它们向下移动到堆栈中。默认情况下，定位的元素都具有 z-index 为 auto，实际上为 0。
+
+```css
+z-index: 1;
+```
+
+
+
+**固定定位**
+
+还有一种类型的定位覆盖——fixed。这与绝对定位的工作方式完全相同，只有一个主要区别：绝对定位将元素固定在相对于其位置最近的祖先。而固定定位固定元素则是相对于浏览器视口本身。
+
+可以实现回到顶部等功能
+
+```css
+position: fixed;
+```
+
+
+
+**粘性定位**
+
+它允许被定位的元素表现得像相对定位一样，直到它滚动到某个阈值点（例如，从视口顶部起 10 像素）为止，此后它就变得固定了。
+
+```css
+position: sticky;
+```
+
+
+
+### 媒体查询
+
+> **CSS 媒体查询**为你提供了一种应用 CSS 的方法，仅在浏览器和设备的环境与你指定的规则相匹配的时候 CSS 才会真的被应用
+
+```css
+@media media-type and (media-feature-rule) {
+  /* CSS rules go here */
+}
+```
+
+它由以下部分组成：
+
+- 一个媒体类型，告诉浏览器这段代码是用在什么类型的媒体上的（例如印刷品或者屏幕）；
+- 一个媒体表达式，是一个被包含的 CSS 生效所需的规则或者测试；
+- 一组 CSS 规则，会在测试通过且媒体类型正确的时候应用。
+
+
+
+你可以指定的媒体类型为：
+
+| all    | 用于所有媒体类型设备。                   |
+| ------ | ---------------------------------------- |
+| print  | 用于打印机。                             |
+| screen | 用于计算机屏幕、平板电脑、智能手机等等。 |
+| speech | 用于大声“读出”页面的屏幕阅读器。         |
+
+
+
+下面的例子在视口宽度为 480 像素或更宽时将背景颜色更改为浅绿色（如果视口小于 480 像素，则背景颜色会是粉色）：
+
+```css
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+```
+
