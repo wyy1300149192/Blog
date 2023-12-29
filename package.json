@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "devDependencies": {
+    "naive-ui": "^2.36.0",
     "vitepress": "^1.0.0-beta.3"
   },
   "scripts": {
