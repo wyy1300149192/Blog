@@ -923,7 +923,7 @@ var mycar = { make: "Honda", model: "Accord", year: 1998 };
 
 **`instanceof`**
 
- 如果所判别的对象确实是所指定的类型，则返回`true`。其语法如下：
+ 如果所判别的对象确实是所指定的类型，则返回`true`。其语法如下：
 
 ```js
 objectName instanceof objectType;
@@ -1013,3 +1013,576 @@ Math 的方法
 | [`clz32()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/clz32), [`imul()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Math/imul) | 在 32 位 2 进制表示中，开头的 0 的数量。*返回传入的两个参数相乘结果的类 C 的 32 位表现形式* |
 
 和其他对象不同，你不能够创建一个自己的 Math 对象。你只能使用内置的 Math 对象。
+
+### 日期对象
+
+JavaScript 没有日期数据类型。但是你可以在你的程序里使用 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象和其方法来处理日期和时间。Date 对象有大量的设置、获取和操作日期的方法。它并不含有任何属性。
+
+JavaScript 处理日期数据类似于 Java。这两种语言有许多一样的处理日期的方法，也都是以 1970 年 1 月 1 日 00:00:00 以来的毫秒数来储存数据类型的。
+
+
+
+创建一个日期对象：
+
+```js
+var dateObjectName = new Date([parameters]);
+```
+
+`dateObjectName`为所创建的Date对象的名字，或是其他对象的一个属性
+
+不使用 *new* 关键字来调用 Date 对象将返回当前时间和日期的字符串
+
+
+
+`parameters`参数可选：
+
+- 无参数 : 创建今天的日期和时间，例如： `today = new Date();`.
+- 一个符合以下格式的表示日期的字符串："月 日，年 时：分：秒"。例如： `var Xmas95 = new Date("December 25, 1995 13:30:00")。`如果你省略时、分、秒，那么他们的值将被设置为 0。
+- 表示日期的字符串值。该字符串应该能被 [`Date.parse()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse) 正确方法识别（即符合 [IETF-compliant RFC 2822 timestamps](https://tools.ietf.org/html/rfc2822#page-14) 或 [version of ISO8601](https://www.ecma-international.org/ecma-262/5.1/#sec-15.9.1.15)）。
+- 一个年，月，日，时，分，秒的集合，例如： `var Xmas95 = new Date(1995, 11, 25, 9, 30, 0);`.
+
+
+
+**方法**
+
+[`Date.parse()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/parse)
+
+解析一个表示日期的字符串，并返回从 1970-1-1 00:00:00 所经过的毫秒数。
+
+[`Date.now()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/now)
+
+返回自 1970-1-1 00:00:00 UTC（世界标准时间）至今所经过的毫秒数。
+
+
+
+**实例方法**
+
+[`Date.prototype.getDate()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDate)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象为一个月中的`哪一日`（`1`-`31`）。
+
+[`Date.prototype.getDay()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getDay)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象是在一周中的第几天（`0`-`6`），0 表示`星期`天。
+
+[`Date.prototype.getFullYear()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getFullYear)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的完整`年份`（四位数年份）。
+
+[`Date.prototype.getHours()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getHours)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`小时`（`0`–`23`）。
+
+[`Date.prototype.getMilliseconds()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMilliseconds)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`毫秒数`（`0`–`999`）。
+
+[`Date.prototype.getMinutes()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMinutes)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`分钟数`（`0`–`59`）。
+
+[`Date.prototype.getMonth()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getMonth)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`月份`（`0`–`11`），0 表示一年中的第一月。
+
+[`Date.prototype.getSeconds()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getSeconds)
+
+根据本地时间，返回一个指定的 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`秒数`（`0`–`59`）。
+
+[`Date.prototype.getTime()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/getTime)
+
+返回一个数值，表示从 1970 年 1 月 1 日 0 时 0 分 0 秒（UTC，即协调世界时）距离该 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象所代表时间的毫秒数。（更早的时间会用负数表示）
+
+[`Date.prototype.setDate()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setDate)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象在所属月份中的`天数`。数值超过天数会用差值
+
+[`Date.prototype.setFullYear()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setFullYear)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的完整`年份`（四位数年份）。
+
+[`Date.prototype.setHours()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setHours)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的小时数。
+
+[`Date.prototype.setMilliseconds()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setMilliseconds)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`豪秒数`。
+
+[`Date.prototype.setMinutes()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setMinutes)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的分钟数。
+
+[`Date.prototype.setMonth()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setMonth)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`月份`。
+
+[`Date.prototype.setSeconds()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setSeconds)
+
+根据本地时间，设置一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象的`秒数`。
+
+[`Date.prototype.setTime()`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date/setTime)
+
+用一个从 1970-1-1 00:00:00 UTC 计时的毫秒数来为一个 [`Date`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date) 对象设置时间。用负数来设置更早的时间。
+
+## 文本格式化
+
+### 字符串对象
+
+[`String`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) 对象是对原始 string 类型的封装 .
+
+```js
+const foo = new String("foo"); // 创建一个 String 对象
+console.log(foo); // 输出：[String: 'foo']
+typeof foo; // 返回 'object'
+```
+
+你可以在 String 字面值上使用 String 对象的任何方法—JavaScript 自动把 String 字面值转换为一个临时的 String 对象，然后调用其相应方法，最后丢弃此临时对象。在 String 字面值上也可以使用 String.length 属性。
+
+
+
+除非必要，应该尽量使用 String 字面值，因为 String 对象的某些行为可能并不与直觉一致。举例：
+
+```js
+const firstString = "2 + 2"; //创建一个字符串字面量
+const secondString = new String("2 + 2"); // 创建一个字符串对象
+eval(firstString); // 返回数字 4
+eval(secondString); // 返回包含 "2 + 2" 的字符串对象
+```
+
+
+
+`String` 对象有一个属性 `length`，标识了字符串中 UTF-16 的码点个数。举例，下面的代码把 13 赋值给了`helloLength`，因为 "Hello, World!" 包含 13 个字符，每个字符用一个 UTF-16 码点表示。你可以通过数组的方式访问每一个码点，但你不能修改每个字符，因为字符串是不变的类数组对象：
+
+```js
+const hello = "Hello, World!";
+const helloLength = hello.length;
+hello[0] = "L"; // 无效，因为字符串是不变的
+hello[0]; // 返回 "H"
+```
+
+
+
+### **字符串方法**
+
+| 方法                    | 参数                         | 描述                                                         |
+| ----------------------- | ---------------------------- | ------------------------------------------------------------ |
+| startsWith              | 查找的字符串，[起始位置索引] | 判断当前字符串是否以另外一个给定的子字符串开头，并根据判断结果返回 `true` 或 `false`。 |
+| endsWith                | 查找的字符串，[起始位置索引] | 判断当前字符串是否以另外一个给定的子字符串结尾，并根据判断结果返回 `true` 或 `false`。 |
+| includes                | 指定字符串                   | 是否包含指定字符串，并根据判断结果返回 `true` 或 `false`。   |
+| concat                  | n个字符串...                 | 连接多个字符串并返回新字符串                                 |
+| split                   | 分隔符，数组数量限制         | 将字符串分割成数组并返回                                     |
+| slice                   | 开始索引，结束索引           | 提取字符串的一部分                                           |
+| substring               | 开始索引，[结束索引]         | 方法返回该字符串从起始索引到结束索引（不包括）的部分，如果未提供结束索引，则返回到字符串末尾的部分。 |
+| replace                 | 正则或字符串，替换值         | 将字符串替换指定内容，返回替换后的字符串                     |
+| match                   | 正则                         | 返回匹配项的数组，如无匹配则返回`null`                       |
+| search                  | 正则                         | 返回首个匹配项的索引，如无匹配则返回`-1`                     |
+| toLowerCase,toUpperCase |                              | 将字符串转换为小写和大写                                     |
+| repeat                  | 数量                         | 将字符串内容重复指定次数后返回。                             |
+| trim                    |                              | 去除开头和结尾的空白字符                                     |
+
+## 正则表达式
+
+### 创建一个正则表达式
+
+利用双斜杠之间创建
+
+```js
+let re = /A-Z{8}/
+```
+
+脚本加载后，正则表达式字面量就会被编译。当正则表达式保持不变时，使用此方法可获得更好的性能。
+
+
+
+或者调用`RegExp`对象的构造函数
+
+```js
+var re = new RegExp("ab+c");
+```
+
+在脚本运行过程中，用构造函数创建的正则表达式会被编译。如果正则表达式将会改变，或者它将会从用户输入等来源中动态地产生，就需要使用构造函数来创建正则表达式。
+
+
+
+### 使用简单模式
+
+简单模式是由你想直接找到的字符构成。比如，`/abc/` 这个模式就能且仅能匹配 "abc" 字符按照顺序同时出现的情况。
+
+### 使用特殊字符
+
+当你需要匹配一个不确定的字符串时，比如寻找一个或多个 "b"，或者寻找空格，可以在模式中使用特殊字符。比如，你可以使用 `/ab*c/` 去匹配一个单独的 "a" 后面跟了零个或者多个 "b"，同时后面跟着 "c" 的字符串：`*`的意思是前一项出现零次或者多次。
+
+| 字符                                                         | 含义                                                         |
+| ------------------------------------------------------------ | ------------------------------------------------------------ |
+| `^`                                                          | 匹配输入的开头。                                             |
+| `$`                                                          | 匹配输入的结束。                                             |
+| `\b`                                                         | 匹配一个字母的开头或结尾边界                                 |
+| `\B`                                                         | 匹配一个字母的非边界开头或非边界结尾                         |
+| `[a-c]`                                                      | 字符类，匹配包含在方括号中的任何字符。`[abcd]` 与 `[a-d]` 相同。 |
+| `[^a-c]`                                                     | 它匹配未包含在方括号中的任何字符。                           |
+| `.`                                                          | 匹配字符前或后`.`的位数，必须符合位数                        |
+| `\d`                                                         | 匹配任何数字 (阿拉伯数字)。相当于 `[0-9]`。                  |
+| `\D`                                                         | 匹配任何非数字 (阿拉伯数字) 的字符。相当于`[^0-9]`           |
+| `\w`                                                         | 匹配基本拉丁字母中的任何字母数字字符，包括下划线。相当于 `[A-Za-z0-9_]`。 |
+| `\W`                                                         | 匹配任何不是来自基本拉丁字母的单词字符。相当于 `[^A-Za-z0-9_]`。 |
+| `\s`                                                         | 匹配单个空白字符，包括空格、制表符、换页符、换行符和其他 Unicode 空格。 |
+| `\S`                                                         | 匹配除空格以外的单个字符。                                   |
+| `x|y`                                                        | 匹配 "x" 或 "y" 任意一个字符。                               |
+| `(x)`                                                        | **捕获组：**匹配 x 并记住匹配项。使用 `RegExp` 对象的属性 (`$1, ..., $9`)来获取 |
+| `\n`                                                         | 其中 n 是一个正整数。对之前的捕获组进行反向引用，n为第几个   |
+| [`(?<Name>x)`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions/Groups_and_backreferences) | **具名捕获组：**匹配"x"并将其存储在返回的匹配项的 groups 属性中 |
+| `x*`                                                         | 将前面的项“x”匹配 0 次或更多次。                             |
+
+## 数组
+
+### 创建数组
+
+以下语句创建了等效的数组：
+
+```js
+const arr1 = new Array(element0, element1, /* … ,*/ elementN);
+const arr2 = Array(element0, element1, /* … ,*/ elementN);
+const arr3 = [element0, element1, /* … ,*/ elementN];
+```
+
+
+
+为了创建一个长度不为 0，但是又没有任何元素的数组，可选以下任何一种方式：
+
+```js
+// 这种方式...
+const arr1 = new Array(arrayLength);
+
+// ...与这种方式会形成相同数组
+const arr2 = Array(arrayLength);
+
+// 这个效果也一样
+const arr3 = [];
+arr3.length = arrayLength;
+```
+
+如果你创建的数组是一个元素，正好又是一个数值，可以用 [`Array.of`](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array/of) 静态方法来创建包含单个元素的数组。
+
+```js
+const wisenArray = Array.of(9.3); // wisenArray 只包含一个元素：9.3
+```
+
+
+
+你也可以给 `length` 属性赋值。
+
+写一个小于数组元素数量的值将截断数组，写 `0` 会彻底清空数组：
+
+```js
+const cats = ["Dusty", "Misty", "Twiggy"];
+console.log(cats.length); // 3
+
+cats.length = 2;
+console.log(cats); // [ 'Dusty', 'Misty' ] - Twiggy 已经被移除了
+
+cats.length = 0;
+console.log(cats); // 输出 []，猫名称的数组现在已经空了
+
+cats.length = 3;
+console.log(cats); // 输出 [ <3 empty items> ]
+```
+
+### 数组方法
+
+#### **forEach()**
+
+传递给 `forEach` 的函数对数组中的每个元素执行一次，数组元素作为参数传递给该函数。未赋值的值不会在 `forEach` 循环迭代。
+
+注意，在数组定义时省略的元素不会在 `forEach` 遍历时被列出，但是手动赋值为 `undefined` 的元素是*会*被列出的：
+
+```js
+const sparseArray = ["first", "second", , "fourth"];
+
+sparseArray.forEach((element) => {
+  console.log(element);
+});
+// first
+// second
+// fourth
+
+if (sparseArray[2] === undefined) {
+  console.log("sparseArray[2] 是 undefined"); // true
+}
+
+const nonsparseArray = ["first", "second", undefined, "fourth"];
+
+nonsparseArray.forEach((element) => {
+  console.log(element);
+});
+// first
+// second
+// undefined
+// fourth
+```
+
+#### **concat()**
+
+方法连接两个或多个数组并返回一个新的数组。
+
+```js
+let myArray = ["1", "2", "3"];
+myArray = myArray.concat("a", "b", "c");
+// myArray 现在是 ["1", "2", "3", "a", "b", "c"]
+```
+
+#### join()
+
+方法将数组中的所有元素连接成一个字符串。
+
+```js
+const myArray = ["Wind", "Rain", "Fire"];
+const list = myArray.join(" - "); // list 现在是 "Wind - Rain - Fire"
+```
+
+#### push()
+
+方法在数组末尾添加一个或多个元素，并返回数组操作后的 `length`。
+
+```js
+const myArray = ["1", "2"];
+myArray.push("3"); // myArray 现在是 ["1", "2", "3"]
+```
+
+#### pop()
+
+方法从数组移出最后一个元素，并返回该元素。
+
+```js
+const myArray = ["1", "2", "3"];
+const last = myArray.pop();
+// myArray 现在是 ["1", "2"]，last 为 "3"
+```
+
+#### shift()
+
+方法从数组移出第一个元素，并返回该元素。
+
+```js
+const myArray = ["1", "2", "3"];
+const first = myArray.shift();
+// myArray 现在是 ["2", "3"]，first 为 "1"
+```
+
+#### unshift()
+
+方法在数组开头添加一个或多个元素，并返回数组的新长度。
+
+```js
+const myArray = ["1", "2", "3"];
+myArray.unshift("4", "5");
+// myArray 变成了 ["4", "5", "1", "2", "3"]
+```
+
+#### slice()
+
+方法从数组提取一个片段，并作为一个新数组返回。
+
+```js
+let myArray = ["a", "b", "c", "d", "e"];
+myArray = myArray.slice(1, 4); // [ "b", "c", "d"]
+// 从索引 1 开始，提取所有的元素，直到索引 3 为止
+```
+
+#### at()
+
+方法返回数组中指定索引处的元素，如果索引超出范围，则返回 `undefined`。它主要用于从数组末尾访问元素的负下标。
+
+```js
+const myArray = ["a", "b", "c", "d", "e"];
+myArray.at(-2); // "d"，myArray 的倒数第二个元素
+```
+
+#### splice()
+
+方法通过移除或者替换已存在的元素和/或添加新元素就地改变一个数组的内容。
+
+参数: start, deleteCount, itemN
+
+start：从 0 开始计算的索引，表示要开始改变数组的位置
+
+deleteCount：一个整数，表示数组中要从 `start` 开始删除的元素数量。如果省略了 `deleteCount`，或者其值大于或等于由 `start` 指定的位置到数组末尾的元素数量，那么从 `start` 到数组末尾的所有元素将被删除。如果 `deleteCount` 是 `0` 或者负数，则不会移除任何元素。
+
+itemN：从 `start` 开始要加入到数组中的元素。如果不指定任何元素，`splice()` 将只从数组中删除元素。
+
+```js
+const months = ['Jan', 'March', 'April', 'June'];
+months.splice(1, 0, 'Feb');
+// Inserts at index 1
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "June"]
+
+months.splice(4, 1, 'May');
+// Replaces 1 element at index 4
+console.log(months);
+// Expected output: Array ["Jan", "Feb", "March", "April", "May"]
+```
+
+#### reverse()
+
+方法原地颠倒数组元素的顺序
+
+```js
+const myArray = ["1", "2", "3"];
+myArray.reverse();
+// 将原数组颠倒，myArray = [ "3", "2", "1" ]
+```
+
+#### flat()
+
+方法返回一个新数组，所有子数组元素递归地连接到其中，直到指定的深度。
+
+```js
+let myArray = [1, 2, [3, 4]];
+myArray = myArray.flat();
+// myArray 现在是 [1, 2, 3, 4]，因为子数组 [3, 4] 已被展平
+```
+
+#### sort()
+
+方法对数组的元素进行适当的排序，并返回对数组的引用。默认排序是将元素转换为字符串，然后按照它们的 UTF-16 码元值升序排序。
+
+```js
+const myArray = ["Wind", "Rain", "Fire"];
+myArray.sort();
+// 对数组排序，myArray = ["Fire", "Rain", "Wind"]
+```
+
+#### indexOf()
+
+方法在数组中搜索 `searchElement` 并返回第一个匹配的索引。第二个参数可以指定索引开始搜索。
+
+```js
+const a = ["a", "b", "a", "b", "a"];
+console.log(a.indexOf("b")); // 1
+
+// 再试一次，这次从最后一次匹配之后开始
+console.log(a.indexOf("b", 2)); // 3
+console.log(a.indexOf("z")); // -1, 因为找不到 'z'
+```
+
+#### lastIndexOf()
+
+方法的工作原理类似于 `indexOf`，但这是从末尾开始，反向搜索。
+
+#### map()
+
+方法返回由每个数组元素上执行 `callback` 的返回值所组成的新数组。
+
+```js
+const a1 = ["a", "b", "c"];
+const a2 = a1.map((item) => item.toUpperCase());
+console.log(a2); // ['A', 'B', 'C']
+```
+
+#### flatMap()
+
+方法先执行 `map()`，再执行深度为 1 的 `flat()`。
+
+```js
+const a1 = ["a", "b", "c"];
+const a2 = a1.flatMap((item) => [item.toUpperCase(), item.toLowerCase()]);
+console.log(a2); // ['A', 'a', 'B', 'b', 'C', 'c']
+```
+
+#### filter()
+
+方法返回一个新数组，其中包含 `callback` 返回 `true` 的元素。
+
+```js
+const a1 = ["a", 10, "b", 20, "c", 30];
+const a2 = a1.filter((item) => typeof item === "number");
+console.log(a2); // [10, 20, 30]
+```
+
+#### find()
+
+方法返回 `callback` 返回 `true` 的第一个元素。
+
+```js
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.find((item) => typeof item === "number");
+console.log(i); // 10
+```
+
+#### findLast() 
+
+方法返回 `callback` 返回 `true` 的最后一个元素。
+
+```js
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findLast((item) => typeof item === "number");
+console.log(i); // 30
+```
+
+#### findIndex()
+
+方法返回 `callback` 返回 `true` 的第一个元素的索引。
+
+```js
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findIndex((item) => typeof item === "number");
+console.log(i); // 1
+```
+
+### findLastIndex()
+
+方法返回 `callback` 返回 `true` 的最后一个元素的索引。
+
+```js
+const a1 = ["a", 10, "b", 20, "c", 30];
+const i = a1.findLastIndex((item) => typeof item === "number");
+console.log(i); // 5
+```
+
+#### every()
+
+如果 `callback` 对数组中的每一个元素都返回 `true`，则返回`true`
+
+```js
+function isNumber(value) {
+  return typeof value === "number";
+}
+const a1 = [1, 2, 3];
+console.log(a1.every(isNumber)); // true
+const a2 = [1, "2", 3];
+console.log(a2.every(isNumber)); // false
+```
+
+#### some()
+
+如果 `callback` 对数组中有一个元素返回 `true`，则返回`true`
+
+```js
+function isNumber(value) {
+  return typeof value === "number";
+}
+const a1 = [1, 2, 3];
+console.log(a1.some(isNumber)); // true
+const a2 = [1, "2", 3];
+console.log(a2.some(isNumber)); // true
+const a3 = ["1", "2", "3"];
+console.log(a3.some(isNumber)); // false
+```
+
+#### reduce()
+
+方法对数组中的每个值执行 `callback(accumulator, currentValue, currentIndex, Array)`，一般用于求和
+
+```js
+const a = [10, 20, 30];
+const total = a.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  0,
+);
+console.log(total); // 60
+```
+
+#### reduceRight()
+
+方法的工作原理类似于 `reduce()`，但从最后一个元素开始。

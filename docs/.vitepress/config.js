@@ -31,6 +31,10 @@ module.exports = {
                         {
                             text: "JavaScript",
                             link: "/knowledge/JavaScript",
+                        },
+                        {
+                            text: "Vue3",
+                            link: "/knowledge/Vue3",
                         }
                     ],
                 },
@@ -52,6 +56,15 @@ module.exports = {
             ],
             "/rec/": [
                 {
+                    text: "常用软件",
+                    items: [
+                        {
+                            text: "常用软件",
+                            link: "/rec/software",
+                        }
+                    ],
+                },
+                {
                     text: "学习记录",
                     items: [
                         {
@@ -60,6 +73,7 @@ module.exports = {
                         }
                     ],
                 },
+
             ],
     
         },
