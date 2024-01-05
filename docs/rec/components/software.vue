@@ -45,10 +45,9 @@
 </template>
 
 <script setup>
+import {  reactive } from 'vue'
 import { NDivider, NIcon, NCard, NAvatar } from 'naive-ui';
 import { LogoWindows ,TerminalSharp} from "@vicons/ionicons5";
-import {  reactive } from 'vue'
-
 
 const windowsSoftwareList = reactive([
     {
