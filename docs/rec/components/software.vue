@@ -14,8 +14,8 @@
                     <div class="link-item-boty">
                         <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
                         <div class="link-item-boty-right">
-                            <p class="link-item-boty-title">{{ item.name }}</p>
-                            <p class="link-item-boty-introduce">{{ item.introduce }}</p>
+                            <p class="link-item-boty-title" v-istitle>{{ item.name }}</p>
+                            <p class="link-item-boty-introduce" v-istitle  :title="item.introduce">{{ item.introduce }}</p>
                         </div>
                     </div>
 
@@ -36,8 +36,8 @@
                     <div class="link-item-boty">
                         <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
                         <div class="link-item-boty-right">
-                            <p class="link-item-boty-title">{{ item.name }}</p>
-                            <p class="link-item-boty-introduce">{{ item.introduce }}</p>
+                            <p class="link-item-boty-title" v-istitle>{{ item.name }}</p>
+                            <p class="link-item-boty-introduce" v-istitle>{{ item.introduce }}</p>
                         </div>
                     </div>
 
@@ -243,6 +243,15 @@ const toUrl = (url) => {
     window.open(url)
 }
 
+const vIstitle =  {
+    mounted:(el) => {
+        console.log("🚀 ~ file: software.vue:249 ~ el.clientWidth:", el.clientWidth)
+        console.log("🚀 ~ file: software.vue:250 ~ el.scrollWidth:", el.scrollWidth)
+        if(el.scrollWidth <= el.clientWidth){
+            el.title = ''
+        }
+    }
+}
 
 </script>
 
