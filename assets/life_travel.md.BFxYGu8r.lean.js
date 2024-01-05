@@ -1,0 +1,1 @@
+import{_ as s,k as a,l as n,n as i}from"./chunks/framework.gziF_UVn.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"life/travel.md","filePath":"life/travel.md"}'),p={name:"life/travel.md"},t=i("",54),e=[t];function l(h,r,o,d,c,E){return n(),a("div",null,e)}const u=s(p,[["render",l]]);export{g as __pageData,u as default};
