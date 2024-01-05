@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div v-cloak>
         <div>
             <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
                     <LogoWindows />
@@ -312,5 +312,9 @@ const toUrl = (url) => {
 p {
     margin: 0;
     padding: 0;
+}
+
+[v-cloak] {
+  display: none;
 }
 </style>
