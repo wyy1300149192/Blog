@@ -1,1 +1,0 @@
-import{_ as s,o as a,c as n,R as i}from"./chunks/framework.FeXKTjE4.js";const g=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"life/travel.md","filePath":"life/travel.md"}'),p={name:"life/travel.md"},t=i("",54),e=[t];function l(h,r,o,d,c,E){return a(),n("div",null,e)}const u=s(p,[["render",l]]);export{g as __pageData,u as default};
