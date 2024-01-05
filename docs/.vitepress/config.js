@@ -1,4 +1,9 @@
 module.exports = {
+    vite:{
+        ssr: {
+            noExternal: ['naive-ui'],
+          },
+    },
     // 网站标题
     title: '失望的石榴',
     // 网站描述
@@ -13,7 +18,7 @@ module.exports = {
         nav: [
             { text: '知识', link: '/knowledge/Css' },
             { text: '生活', link: '/life/travel' },
-            { text: '记录', link: '/rec/vitepress' },
+            { text: '记录', link: '/rec/software' },
         ],
         sidebar: { // 侧边栏，可以分组
             "/knowledge/": [

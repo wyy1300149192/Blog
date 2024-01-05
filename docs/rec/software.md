@@ -1,9 +1,8 @@
-# 
-
-截图工具：[Snipaste - 截图 + 贴图](https://zh.snipaste.com/)
-
-<software/>
-
+---
+aside: false
+---
 <script setup>
     import software from './components/software.vue'
 </script>
+
+<software/>
