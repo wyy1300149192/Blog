@@ -1,1 +1,0 @@
-import{_ as t,k as d,l as r,n as h}from"./chunks/framework.gziF_UVn.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"life/games.md","filePath":"life/games.md"}'),P={name:"life/games.md"},C=h("",1),e=[C];function a(S,_,s,o,n,c){return r(),d("div",null,e)}const N=t(P,[["render",a]]);export{l as __pageData,N as default};
