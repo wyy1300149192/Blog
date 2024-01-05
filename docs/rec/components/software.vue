@@ -1,48 +1,3 @@
-<template>
-    <div v-cloak>
-        <div>
-            <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
-                    <LogoWindows />
-                </n-icon><span class="title">windows常用工具：</span> </n-divider>
-            <div class="list-item">
-                <n-card class="link-item" @click="toUrl(item.url)" hoverable
-                    v-for="item in windowsSoftwareList">
-                    <div class="link-item-boty">
-                        <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
-                        <div class="link-item-boty-right">
-                            <p class="link-item-boty-title">{{ item.name }}</p>
-                            <p class="link-item-boty-introduce">{{ item.introduce }}</p>
-                        </div>
-                    </div>
-
-                </n-card>
-
-            </div>
-
-        </div>
-        <div>
-            <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
-                    <TerminalSharp />
-                </n-icon><span class="title">开发相关：</span> </n-divider>
-            <div class="list-item">
-                <n-card class="link-item" @click="toUrl(item.url)" hoverable :style="{ 'max-width': isPhone ? '90%' : '' }"
-                    v-for="item in DevelopmentList">
-                    <div class="link-item-boty">
-                        <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
-                        <div class="link-item-boty-right">
-                            <p class="link-item-boty-title">{{ item.name }}</p>
-                            <p class="link-item-boty-introduce">{{ item.introduce }}</p>
-                        </div>
-                    </div>
-
-                </n-card>
-
-            </div>
-
-        </div>
-
-    </div>
-</template>
 
 <script setup>
 import {  reactive } from 'vue'
@@ -238,6 +193,54 @@ const toUrl = (url) => {
 
 
 </script>
+
+<template>
+    <div v-cloak>
+        <div>
+            <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
+                    <LogoWindows />
+                </n-icon><span class="title">windows常用工具：</span> </n-divider>
+            <div class="list-item">
+                <n-card class="link-item" @click="toUrl(item.url)" hoverable
+                    v-for="item in windowsSoftwareList">
+                    <div class="link-item-boty">
+                        <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
+                        <div class="link-item-boty-right">
+                            <p class="link-item-boty-title">{{ item.name }}</p>
+                            <p class="link-item-boty-introduce">{{ item.introduce }}</p>
+                        </div>
+                    </div>
+
+                </n-card>
+
+            </div>
+
+        </div>
+        <div>
+            <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
+                    <TerminalSharp />
+                </n-icon><span class="title">开发相关：</span> </n-divider>
+            <div class="list-item">
+                <n-card class="link-item" @click="toUrl(item.url)" hoverable :style="{ 'max-width': isPhone ? '90%' : '' }"
+                    v-for="item in DevelopmentList">
+                    <div class="link-item-boty">
+                        <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
+                        <div class="link-item-boty-right">
+                            <p class="link-item-boty-title">{{ item.name }}</p>
+                            <p class="link-item-boty-introduce">{{ item.introduce }}</p>
+                        </div>
+                    </div>
+
+                </n-card>
+
+            </div>
+
+        </div>
+
+    </div>
+</template>
+
+
 
 <style scoped>
 .dark .link-item {
