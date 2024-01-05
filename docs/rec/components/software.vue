@@ -26,7 +26,7 @@
                     <TerminalSharp />
                 </n-icon><span class="title">开发相关：</span> </n-divider>
             <div class="list-item">
-                <n-card class="link-item" @click="toUrl(item.url)" hoverable :style="{ 'max-width': isPhone ? '90%' : '' }"
+                <n-card class="link-item" @click="toUrl(item.url)" hoverable
                     v-for="item in DevelopmentList">
                     <div class="link-item-boty">
                         <n-avatar :size="50" color="#ebebef" :src="item.image" style="padding:4px;flex-shrink: 0;" />
