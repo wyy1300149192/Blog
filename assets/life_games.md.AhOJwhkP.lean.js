@@ -1,0 +1,1 @@
+import{_ as t,c as d,o as r,U as h}from"./chunks/framework.yRHJhm0_.js";const l=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"life/games.md","filePath":"life/games.md"}'),P={name:"life/games.md"},C=h("",1),e=[C];function a(S,_,s,o,c,n){return r(),d("div",null,e)}const N=t(P,[["render",a]]);export{l as __pageData,N as default};
