@@ -1,15 +1,14 @@
 
 <template>
     <div v-cloak>
+        <ClientOnly>
+
         <div>
-            <ClientOnly>
                 <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
                     <LogoWindows />
                 </n-icon><span class="title">windows常用工具：</span> </n-divider>
-            </ClientOnly>
 
             <div class="list-item">
-                <ClientOnly>
                     <n-card class="link-item" @click="toUrl(item.url)" hoverable
                     v-for="item in windowsSoftwareList">
                     <div class="link-item-boty">
@@ -21,21 +20,17 @@
                     </div>
 
                 </n-card>
-                </ClientOnly>
 
 
             </div>
 
         </div>
         <div>
-            <ClientOnly>
                 <n-divider title-placement="left"> <n-icon size="20" color="var(--vp-c-brand-1)">
                     <TerminalSharp />
                 </n-icon><span class="title">开发相关：</span> </n-divider>
-            </ClientOnly>
 
             <div class="list-item">
-                <ClientOnly>
                     <n-card class="link-item" @click="toUrl(item.url)" hoverable
                     v-for="item in DevelopmentList">
                     <div class="link-item-boty">
@@ -47,12 +42,12 @@
                     </div>
 
                 </n-card>
-                </ClientOnly>
 
 
             </div>
 
         </div>
+    </ClientOnly>
 
     </div>
 </template>
