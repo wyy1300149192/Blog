@@ -4,7 +4,7 @@ import {
   createStaticVNode,
   defineComponent,
   openBlock
-} from "./chunk-V634PGSD.js";
+} from "./chunk-T76YAG2R.js";
 import "./chunk-ZS7NZCD4.js";
 
 // node_modules/.store/@vicons+ionicons5@0.12.0/node_modules/@vicons/ionicons5/es/Accessibility.js

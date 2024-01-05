@@ -10,7 +10,7 @@ const naive = create({
 
 
 export default {
-  ...Theme,
+  // ...Theme,
   enhanceApp({ app, router, siteData }) {
     app.use(naive)
   },
