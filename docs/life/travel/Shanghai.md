@@ -22,7 +22,7 @@
 
 🏞️ **三千vintage**
 
-<img src="https://imagepphcloud.thepaper.cn/pph/image/122/650/945.JPG" style='width:250px;height:150px;object-fit: cover;' />
+<img src="./assets/945.jpeg" style='width:250px;height:150px;object-fit: cover;' />
 
 > 店里陈列着店主多年收集的、以宝可梦为主的二次元手办周边，仔细观察能收获不少意外惊喜。
 
