@@ -16,12 +16,21 @@ module.exports = {
     ],
     themeConfig: {
         nav: [
-            { text: '知识', link: '/knowledge/Css' },
-            { text: '生活', link: '/life/travel' },
+            { text: '知识', link: '/knowledge/studyPlan' },
+            { text: '生活', link: '/life/travel/Datong' },
             { text: '记录', link: '/rec/software' },
         ],
         sidebar: { // 侧边栏，可以分组
             "/knowledge/": [
+                {
+                    text: "计划",
+                    items: [
+                        {
+                            text: "学习计划",
+                            link: "/knowledge/studyPlan",
+                        }
+                    ],
+                },
                 {
                     text: "前端知识",
                     items: [
@@ -46,12 +55,30 @@ module.exports = {
             ],
             "/life/": [
                 {
-                    text: "生活点滴",
+                    text: "旅行",
                     items: [
                         {
-                            text: "旅行",
-                            link: "/life/travel",
+                            text: "上海",
+                            link: "/life/travel/Shanghai",
                         },
+                        {
+                            text: "大同",
+                            link: "/life/travel/Datong",
+                        },
+                        {
+                            text: "呼和浩特",
+                            link: "/life/travel/Hohhot",
+                        },
+                        {
+                            text: "预期",
+                            link: "/life/travel/plan",
+                        },
+                     
+                    ],
+                },
+                {
+                    text: "其他",
+                    items: [
                         {
                             text: "酒",
                             link: "/life/wine",
