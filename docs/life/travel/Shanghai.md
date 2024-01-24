@@ -16,17 +16,27 @@
 
 ## day2
 
-🏞️ 武康路文化街
+🏞️ **[武康路文化街](https://www.mafengwo.cn/poi/23338.html)**
 
-🏙️ 朵云书店 （￥35）
+<img src="https://p1-q.mafengwo.net/s14/M00/8D/43/wKgE2l1MAsWADgY6AGaXsDMak5E07.jpeg?imageMogr2%2Fthumbnail%2F%21305x183r%2Fgravity%2FCenter%2Fcrop%2F%21305x183%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;' />
+
+🏙️ **朵云书店 （￥35）**
+
+<img src="./assets/3247654-c22d945e3e3f95e5.webp" style='width:250px;height:150px;object-fit: cover;'/>
 
 >  咖啡、上海全景  🔔 需公众号预约 (未来6日 2月8日预约 每日7:00)
 
-⛪ 豫园（￥30）
+⛪ **[豫园](https://www.mafengwo.cn/poi/3889729.html)（￥30）**
 
-⛪ 城隍庙
+<img src="https://p1-q.mafengwo.net/s11/M00/37/5A/wKgBEFxMTcyAUmyMAFq8McgO-B857.jpeg?imageMogr2%2Fthumbnail%2F%21690x370r%2Fgravity%2FCenter%2Fcrop%2F%21690x370%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
 
-🌆 外滩 
+⛪ **[城隍庙](https://www.mafengwo.cn/poi/4464.html)**
+
+<img src="https://p1-q.mafengwo.net/s12/M00/74/57/wKgED1wAjVWAIaVQAAVeykoNMAg34.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
+
+🌆 **[外滩](https://www.mafengwo.cn/poi/5504076.html)** 
+
+<img src="https://p1-q.mafengwo.net/s6/M00/B2/18/wKgB4lJ1MdWABIHAAAysp_8i80o98.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
 
 （根据实际情况调整）
 
@@ -36,11 +46,15 @@
 
 > 🔔 待定 1月31日 14：30抢票
 
-🏛️ 苏州博物馆
+🏛️ **[苏州博物馆](https://www.mafengwo.cn/poi/5674.html)**
+
+<img src="https://p1-q.mafengwo.net/s11/M00/E2/05/wKgBEFtmukmAY8XmAAlqenQsWsY51.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
 
 > 🔔 需公众号预约 (未来7日 2月8日预约 每日0点)
 
-🏞️ 金鸡湖景区
+🏞️ **[金鸡湖景区](https://www.mafengwo.cn/poi/642.html)**
+
+<img src="https://p1-q.mafengwo.net/s12/M00/88/6B/wKgED1wYXSmAd0JDAB0_yM3Mb3c54.jpeg?imageMogr2%2Fthumbnail%2F%21305x183r%2Fgravity%2FCenter%2Fcrop%2F%21305x183%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
 
 🚄 苏州-上海 21:25 - 21:59
 
@@ -52,12 +66,51 @@
 
 ## day4
 
-🎠 迪士尼
+🎠 **[迪士尼](https://www.mafengwo.cn/poi/6102028.html)**
+
+<img src="https://p1-q.mafengwo.net/s11/M00/54/C2/wKgBEFtRWgOAL6CtAAhBG3gnnaM20.jpeg?imageMogr2%2Fthumbnail%2F%21690x370r%2Fgravity%2FCenter%2Fcrop%2F%21690x370%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
 
 ## day5
 
-⛪ 田子坊
+⛪ [田子坊](https://www.mafengwo.cn/poi/1364.html)
 
-⛪ 思南公馆
+<img src="https://p1-q.mafengwo.net/s10/M00/AF/B1/wKgBZ1uA7l6AIjoSAAfkEFSJ3lQ91.jpeg?imageMogr2%2Fthumbnail%2F%21380x270r%2Fgravity%2FCenter%2Fcrop%2F%21380x270%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
+
+⛪ [思南公馆](https://www.mafengwo.cn/poi/4527.html)
+
+<img src="https://p1-q.mafengwo.net/s12/M00/6A/C0/wKgED1wlZPmAFHJyACGD7cq8T2s95.jpeg?imageMogr2%2Fthumbnail%2F%21690x370r%2Fgravity%2FCenter%2Fcrop%2F%21690x370%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;'/>
 
 ✈️ 虹桥-北京首都 19:00 —— 21:20
+
+
+
+## 美食
+
+**生煎**
+
+<img src="https://p1-q.mafengwo.net/s11/M00/4D/79/wKgBEFrkHimADKq-AAbh-uqSjA012.jpeg?imageMogr2%2Fthumbnail%2F%21480x320r%2Fgravity%2FCenter%2Fcrop%2F%21480x320%2Fquality%2F90" style='width:250px;height:150px;object-fit: cover;'/>
+
+1.大壶春
+
+> 大壶春的“无汤生煎”是它的一大特色，面皮厚实松软，裹着少少的油水和饱满的馅料
+
+2.东泰祥
+
+
+
+**本帮菜**
+
+<img src="./assets/91529822720e0cf3d7caf9c8af0ce51fbe096b637ce7.jpeg" style='width:250px;height:150px;object-fit: cover;'/>
+
+1.上海老饭店
+
+2.上海德兴馆
+
+
+
+## 相关资料
+
+[繁花圣地巡礼](https://imfw.cn/l/315876279)
+
+[电台：如果你来上海，我想带你去这些地方](https://www.xiaoyuzhoufm.com/episode/60d81eb925da4f997b8ba25e)
+
