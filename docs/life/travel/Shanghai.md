@@ -20,6 +20,12 @@
 
 <img src="https://p1-q.mafengwo.net/s14/M00/8D/43/wKgE2l1MAsWADgY6AGaXsDMak5E07.jpeg?imageMogr2%2Fthumbnail%2F%21305x183r%2Fgravity%2FCenter%2Fcrop%2F%21305x183%2Fquality%2F100" style='width:250px;height:150px;object-fit: cover;' />
 
+🏞️ **三千vintage**
+
+<img src="https://imagepphcloud.thepaper.cn/pph/image/122/650/945.JPG" style='width:250px;height:150px;object-fit: cover;' />
+
+> 店里陈列着店主多年收集的、以宝可梦为主的二次元手办周边，仔细观察能收获不少意外惊喜。
+
 🏙️ **朵云书店 （￥35）**
 
 <img src="./assets/3247654-c22d945e3e3f95e5.webp" style='width:250px;height:150px;object-fit: cover;'/>
