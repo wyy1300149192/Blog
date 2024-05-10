@@ -269,6 +269,11 @@ const DevelopmentList = reactive([
         introduce: '简单，强大，快速。你一直想要的现代 SSG 框架。',
         image: 'https://router.vuejs.org/logo.svg',
         url: 'https://skewb.gitee.io/vitepress/'
+    }, {
+        name: 'Cascadia Code',
+        introduce: '微软出品的免费编辑器字体',
+        image: 'https://github.com/microsoft/cascadia-code/raw/main/images/cascadia-code.png',
+        url: 'https://github.com/microsoft/cascadia-code/releases'
     },
 
 ])
