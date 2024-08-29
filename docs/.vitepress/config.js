@@ -58,6 +58,10 @@ module.exports = {
                     text: "旅行",
                     items: [
                         {
+                            text: "大连",
+                            link: "/life/travel/DaLian",
+                        },
+                        {
                             text: "三亚",
                             link: "/life/travel/SanYa",
                         },
