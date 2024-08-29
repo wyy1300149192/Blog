@@ -50,11 +50,9 @@
 
 🏞️**星海广场**
 
-<img src="https://note.mafengwo.net/img/31/1a/329b5a2a208a09bd702993ab11e3e358.jpeg?imageView2%2F2%2Fw%2F1280%2Fq%2F50%7CimageMogr2%2Fstrip%2Fquality%2F50" style='width:250px;height:150px;object-fit: cover;' />
-
 🏞️**莲花山观景台**
 
-<img src="https://note.mafengwo.net/img/e2/44/4c25e8110c2ef1b12c9da04765f33355.jpeg?imageMogr2%2Fthumbnail%2F1360x%2Fstrip%2Fquality%2F90" style='width:250px;height:150px;object-fit: cover;' />
+
 
 **六点到达大连体育场**
 
